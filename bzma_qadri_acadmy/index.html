@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Bazm E Qadri – Online Islamic Academy</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+     <!-- Loader & Initial Prompts -->
+     <div id="loader">
+          <div class="loader-content">
+               <h2>Welcome to Coding Aur Code</h2>
+               <div id="theme-choice">
+                    <p>How would you like to view the site?</p>
+                    <button class="theme-btn" data-theme="dark">Dark Mode</button>
+                    <button class="theme-btn" data-theme="light">Light Mode</button>
+               </div>
+          </div>
+     </div>
+
+     <!-- Main Content Wrapper -->
+     <div id="main-content" style="display:none;">
+          <!-- Navbar -->
+          <nav id="navbar">
+               <div class="logo">
+                    <img src="Logo_1.jpeg" alt="Ahmed Ali Mughal"
+                         style="width:48px;height:48px;object-fit:cover;border-radius:50%;margin-right:10px;vertical-align:middle;">
+                    Coding Aur Code
+               </div>
+               <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+               </ul>
+               <div class="nav-actions">
+                    <button id="theme-toggle" title="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+                    <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+               </div>
+          </nav>
+
+          <!-- Main Banner Section -->
+          <section id="main-banner">
+               <div class="banner-overlay"></div>
+               <img src="banner.jpeg" alt="Ahmed Ali Mughal Banner" class="banner-img">
+               <!-- Optional: <div class="banner-text"><h2>Some Heading</h2><p>Some subtext</p></div> -->
+          </section>
+
+          <!-- Hero Section -->
+          <section id="home" class="hero" data-animate>
+               <div class="hero-overlay"></div>
+               <div class="hero-content">
+                    <img src="Logo_2.jpeg" alt="Academy Logo" class="hero-img">
+                    <h1 class="animate-welcome">Welcome to Coding Aur Code</h1>
+                    <h3 class="animate-subtitle">By Ahmed Ali Mughal</h3>
+                    <a href="#courses" class="btn"><i class="fas fa-book-open"></i> <span>Explore Courses</span></a>
+                    <!-- Video Introduction -->
+                    <div class="hero-video-intro">
+                         <video src="intro_video.mp4" controls poster=""
+                              style="width:100%;max-width:420px;border-radius:12px;margin-top:1.5em;"></video>
+                         <!-- Or embed YouTube: <iframe width="420" height="236" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen style="border-radius:12px;margin-top:1.5em;"></iframe> -->
+                    </div>
+               </div>
+          </section>
+
+          <!-- About Section -->
+          <section id="about" data-animate>
+               <div class="about-container">
+                    <img src="about_3.jpeg" alt="Ahmed Ali Mughal" class="about-img">
+                    <div class="about-text">
+                         <h2>About</h2>
+                         <h2> Ahmed Ali Mughal</h2>
+                         <p>Ahmed Ali Mughal is a software engineer and a web developer.
+                         </p>
+                         <h3>Mission & Vision</h3>
+                         <p>To provide the best possible education to the students and to help them achieve their goals.
+                         </p>
+                    </div>
+               </div>
+          </section>
+
+          <!-- Social Media Posts Section -->
+          <section id="social-posts" data-animate>
+               <div class="social-header">
+                    <h2><i class="fab fa-facebook" style="color:#0767f7;margin-right:8px;"></i>Social Media Posts</h2>
+                    <a href="https://www.facebook.com/share/1AX5NrGzQt/" target="_blank" class="social-link">View More
+                         on Facebook</a>
+               </div>
+               <div class="social-grid">
+                    <button class="social-img-btn" data-img="poster_1.jpeg"><img src="poster_1.jpeg" alt="Social Post 1"
+                              class="social-img"></button>
+                    <button class="social-img-btn" data-img="poster_2.jpeg"><img src="poster_2.jpeg" alt="Social Post 2"
+                              class="social-img"></button>
+                    <button class="social-img-btn" data-img="poster_3.jpeg"><img src="poster_3.jpeg" alt="Social Post 3"
+                              class="social-img"></button>
+                    <button class="social-img-btn" data-img="poster_4.jpeg"><img src="poster_4.jpeg" alt="Social Post 4"
+                              class="social-img"></button>
+               </div>
+               <!-- Fullscreen Modal for Social Post -->
+               <div id="social-modal" class="social-modal">
+                    <span class="social-modal-close">&times;</span>
+                    <img class="social-modal-content" id="social-modal-img" src="" alt="Social Post Fullscreen">
+               </div>
+          </section>
+
+          <!-- Courses Section -->
+          <section id="courses" data-animate>
+               <h2>Our Courses</h2>
+               <div class="courses-grid">
+                    <label class="course-card">
+                         <input type="checkbox" name="course" value="Web Development" class="course-checkbox" hidden>
+                         <span>Web Development</span>
+                    </label>
+                    <label class="course-card">
+                         <input type="checkbox" name="course" value="Graphic Designing" class="course-checkbox" hidden>
+                         <span>Front End Development</span>
+                    </label>
+
+                    </label>
+                    <label class="course-card">
+                         <input type="checkbox" name="course" value="Video Editing" class="course-checkbox" hidden>
+                         <span>Back End Development</span>
+                    </label>
+                    <label class="course-card">
+                         <input type="checkbox" name="course" value="MS Excel & MS Office" class="course-checkbox"
+                              hidden>
+                         <span>Graphic Designing</span>
+                    </label>
+                    <label class="course-card">
+                         <input type="checkbox" name="course" value="MS Excel & MS Office" class="course-checkbox"
+                              hidden>
+                         <span>Video Editing</span>
+                    </label>
+                    <label class="course-card">
+                         <input type="checkbox" name="course" value="MS Excel & MS Office" class="course-checkbox"
+                              hidden>
+                         <span>MS Excel & MS Office</span>
+                    </label>
+               </div>
+          </section>
+
+          <!-- Skills Section -->
+          <section id="skills" data-animate>
+               <h2>My Skills</h2>
+               <div class="skills-grid">
+                    <div class="skill-card">HTML, CSS, JavaScript</div>
+                    <div class="skill-card">React, Node.js, Express</div>
+                    <div class="skill-card">MongoDB, MySQL</div>
+                    <div class="skill-card">Graphic Designing</div>
+                    <div class="skill-card">Video Editing</div>
+                    <div class="skill-card">MS Excel & MS Office</div>
+               </div>
+          </section>
+
+          <!-- Experience Section -->
+          <section id="experience" data-animate>
+               <h2>Experience</h2>
+               <ul class="experience-list">
+                    <li>Years of Experience: <span>10+</span></li>
+                    <li>Number of Students: <span>500+</span></li>
+                    <li>Online Classes Conducted: <span>200+</span></li>
+                    <li>Certifications: <span>Web Development, Graphic Designing, Video Editing, MS Excel & MS
+                              Office</span></li>
+               </ul>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact" data-animate>
+               <h2>Contact Me</h2>
+               <form id="admission-form" action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-group">
+                         <label for="name">Name</label>
+                         <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                         <label for="name">Phone Number</label>
+                         <input type="number" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                         <label for="email">Email</label>
+                         <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                         <label for="selected-courses">Selected Courses</label>
+                         <input type="text" id="selected-courses" name="selected-courses" readonly required
+                              placeholder="Select courses above">
+                    </div>
+                    <div class="form-group">
+                         <label for="message">Message</label>
+                         <textarea id="message" name="message" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                         <label><input type="checkbox" name="whatsapp" value="yes"> Contact me on WhatsApp</label>
+                    </div>
+                    <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> <span>Submit</span></button>
+               </form>
+               <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Academy Location: [Karachi, Pakistan]</p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/923312374987"
+                              target="_blank">+92 331 2374987</a></p>
+               </div>
+               <!-- Optional: Embedded Google Map -->
+               <div class="map-embed">
+                    <!-- <iframe src="YOUR_GOOGLE_MAP_EMBED_URL" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+               </div>
+          </section>
+
+          <!-- FAQ Section -->
+          <section id="faq" data-animate>
+               <h2>FAQ</h2>
+               <div class="faq-item">
+                    <h4>How do I enroll?</h4>
+                    <p>Fill out the admission form and I will contact you.</p>
+                    <p>I am available on WhatsApp and Email.</p>
+               </div>
+               <!-- Add more faq-item blocks -->
+          </section>
+
+          <!-- Footer -->
+          <footer data-animate>
+               <div class="footer-social">
+                    <a href="https://www.youtube.com/@realahmedmughal" title="YouTube" target="_blank"><i
+                              class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/923312374987" title="WhatsApp" target="_blank"><i
+                              class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/share/1AX5NrGzQt/" title="Facebook" target="_blank"><i
+                              class="fab fa-facebook"></i></a>
+               </div>
+               <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+               </div>
+               <div class="footer-bottom">
+                    <button id="footer-theme-toggle" title="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+                    <p>© 2025 Coding Aur Code | Ahmed Ali Mughal</p>
+               </div>
+          </footer>
+     </div>
+
+     <!-- Speed Dial Floating Action Button -->
+     <div id="speed-dial">
+          <button id="speed-dial-main" title="More Actions"><i class="fas fa-plus"></i></button>
+          <div id="speed-dial-actions">
+               <button class="speed-dial-action" id="speed-dial-whatsapp" title="Chat on WhatsApp"><i
+                         class="fab fa-whatsapp"></i></button>
+               <button class="speed-dial-action" id="speed-dial-message" title="Contact Us"><i
+                         class="fas fa-comment-dots"></i></button>
+               <button class="speed-dial-action" id="speed-dial-top" title="Back to Top"><i
+                         class="fas fa-arrow-up"></i></button>
+          </div>
+     </div>
+
+     <script src="script.js"></script>
+</body>
+
+</html>
